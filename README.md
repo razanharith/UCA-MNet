@@ -163,15 +163,6 @@ python evaluate.py --dataset ISIC2018 --model_path checkpoints/best_model.pth
 
 If you find this work useful for your research, please cite our manuscript:
 
-```bibtex
-@article{alharith2025ucamnet,
-  title={An Ultra-Lightweight Cross-scale Attention Mamba Network for Accurate Skin Lesion Segmentation},
-  author={Alharith, Razan and Zhang, Jiashu and Zhao, Chengqiang},
-  journal={IEEE Journal of Biomedical and Health Informatics},
-  year={2025}
-}
-
-```
 
 ---
 
