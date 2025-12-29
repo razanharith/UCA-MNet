@@ -1,18 +1,18 @@
-#  An Ultra-Lightweight Cross-scale Attention Mamba Network for Accurate Skin Lesion Segmentation
+# An Ultra-Lightweight Cross-scale Attention Mamba Network for Accurate Skin Lesion Segmentation
 
 This is the official implementation of **UCA-MNet**, a Cross-scale Attention Mamba Network as introduced in the paper:
 
 **"An Ultra-Lightweight Cross-scale Attention Mamba Network for Accurate Skin Lesion Segmentation"**.
 
-📄 **Paper:** [IEEE Journal of Biomedical and Health Informatics Link to be added] 
+ **Submittied to:** [IEEE Journal of Biomedical and Health Informatics Link to be added] 
 
-🚀 **Key Highlights:** 0.33M Parameters | 4.3 GFLOPs | 0.0537s Inference Time 
+ **Key Highlights:** 0.33M Parameters | 4.3 GFLOPs | 0.0537s Inference Time 
 
 UCA-MNet addresses the computational-precision trade-off by utilizing **Bi-Mamba** to model long-range spatial dependencies with linear complexity. It is approximately **83 times more parameter-efficient** than leading models like VM-UNet while maintaining clinical-grade precision.
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 UCA-MNet achieves a state-of-the-art balance between accuracy and efficiency through three key innovations:
 
@@ -26,7 +26,7 @@ UCA-MNet achieves a state-of-the-art balance between accuracy and efficiency thr
 
 ---
 
-## 📊 Performance Results
+## Performance Results
 
 UCA-MNet delivers superior or comparable performance to leading heavyweight architectures with a fraction of the parameters.
 
@@ -71,7 +71,7 @@ UCA-MNet produces more precise lesion boundaries and sharper edge delineation, e
 
 ---
 
-## 📁 Dataset Preparation
+## Dataset Preparation
 
 We utilize three publicly available benchmarks for skin lesion segmentation:
 
@@ -112,7 +112,7 @@ UCA-MNet/
 
 ---
 
-## 🎯 Training
+## Training
 
 To train UCA-MNet on a specific dataset using an 80-10-10 split:
 
@@ -130,7 +130,7 @@ python train.py --dataset PH2 --epochs 100 --batch_size 2
 
 ---
 
-## 🧪 Evaluation
+## Evaluation
 
 To evaluate a trained model using AIU (Average Intersection Over Union) and OIS (Optimal Image Score) metrics:
 
@@ -141,14 +141,14 @@ python evaluate.py --dataset ISIC2018 --model_path checkpoints/best_model.pth
 
 ---
 
-## 📝 Citation
+## Citation
 
 If you find this work useful for your research, please cite our manuscript:
 
 
 ---
 
-## ✉️ Contact
+## Contact
 
 **Razan Alharith** (Southwest Jiaotong University)
 
