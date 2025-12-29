@@ -22,7 +22,7 @@ UCA-MNet achieves a state-of-the-art balance between accuracy and efficiency thr
 
 
 
-
+![Framework](framework.png)
 
 ---
 
