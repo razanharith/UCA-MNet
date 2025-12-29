@@ -65,18 +65,9 @@ UCA-MNet produces more precise lesion boundaries and sharper edge delineation, e
 
 ### 2. Experimental Setup
 
-* 
-**Preprocessing:** Images and masks are standardized to  pixels.
-
-
-* 
-**Optimizer:** Adam with an initial learning rate of .
-
-
-* 
-**Loss Function:** Hybrid loss combining Binary Cross-Entropy (BCE), Dice, and IoU losses.
-
-
+* **Preprocessing:** Images and masks are standardized to  pixels.
+* **Optimizer:** Adam with an initial learning rate of .
+* **Loss Function:** Hybrid loss combining Binary Cross-Entropy (BCE), Dice, and IoU losses.
 
 ---
 
@@ -86,24 +77,15 @@ We utilize three publicly available benchmarks for skin lesion segmentation:
 
 ### Supported Datasets
 
-1. **ISIC-2017 Segmentation Dataset**
-* 2,000 dermoscopic images.
-
-
+1. **ISIC-2017 Segmentation Dataset** : 2,000 dermoscopic images.
 * [Download from ISIC Archive](https://challenge.isic-archive.com/data/)
 
 
-2. **ISIC-2018 Task 1: Lesion Boundary Segmentation**
-* 2,594 training images.
-
-
+2. **ISIC-2018 Task 1: Lesion Boundary Segmentation**: 2,594 training images.
 * [Download from ISIC Archive](https://challenge.isic-archive.com/data/)
 
 
-3. **PH2 Dataset**
-* 200 images from Pedro Hispano Hospital.
-
-
+3. **PH2 Dataset**: 200 images from Pedro Hispano Hospital.
 * [Download Link](https://www.fc.up.pt/addi/ph2%20database.html)
 
 
