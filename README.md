@@ -4,7 +4,7 @@ This is the official implementation of **UCA-MNet**, a Cross-scale Attention Mam
 
 **"An Ultra-Lightweight Cross-scale Attention Mamba Network for Accurate Skin Lesion Segmentation"**.
 
- **Submittied to:** [IEEE Journal of Biomedical and Health Informatics Link to be added] 
+ **Submittied to:** [IEEE Journal of Biomedical and Health Informatics] 
 
  **Key Highlights:** 0.33M Parameters | 4.3 GFLOPs | 0.0537s Inference Time 
 
