@@ -91,7 +91,7 @@ if __name__ == '__main__':
     parser.add_argument('--lr', type=float, default=0.001)        # Higher LR for large datasets (research-proven)
     parser.add_argument('--num_epochs', type=int, default=100)     # Standard for medical segmentation
     parser.add_argument('--num_epochs_decay', type=int, default=10) # T_0 for CosineAnnealingWarmRestarts
-    parser.add_argument('--batch_size', type=int, default=4)       # Larger batch for stable gradients
+    parser.add_argument('--batch_size', type=int, default=2)       # Larger batch for stable gradients
     parser.add_argument('--loss_threshold', type=float, default=0.5)
     parser.add_argument('--loss_type', type=str, default='BCE_Dice_mIoU', help='[BCE,BCE_mIoU,BCE_Dice_mIoU]')
     parser.add_argument('--optimizer', type=str, default='Adam', help='[Adam,SGD,AdamW]') # Standard Adam (research-proven)
@@ -105,18 +105,18 @@ if __name__ == '__main__':
     # Misc  
     parser.add_argument('--report_file', type=str, default='PH2')
     parser.add_argument('--mode', type=str, default='train', help='[train,test]')
-    parser.add_argument('--dataset', type=str, default='PH2', help='[PH2,ISIC2017]')
+    parser.add_argument('--dataset', type=str, default='PH2', help='[PH2,ISIC2017,ISIC2018]')
     parser.add_argument('--use_enhanced_lmnet', action='store_true')
     parser.add_argument('--models', type=str, default=None, help='Comma-separated list of UCA-Net models to run (e.g., UCA_Net,UCA_Net_Baseline)')
     parser.add_argument('--save_images', action='store_true', help='Save predicted images during testing')
 
    
-    parser.add_argument('--train_path', type=str, default='/Users/razan/Documents/Research/2.Technical/0.Datasets/PH2/train/')
-    parser.add_argument('--valid_path', type=str, default='/Users/razan/Documents/Research/2.Technical/0.Datasets/PH2/valid/')
-    parser.add_argument('--test_path', type=str, default='/Users/razan/Documents/Research/2.Technical/0.Datasets/PH2/test/')
-    parser.add_argument('--model_path', type=str, default='/Users/razan/Documents/Research/2.Technical/1.Seg-papers/2.UCA_Net/main-code/Results/models/')
-    parser.add_argument('--result_path', type=str, default='/Users/razan/Documents/Research/2.Technical/1.Seg-papers/2.UCA_Net/main-code/Results/results/')
-    parser.add_argument('--SR_path', type=str, default='/Users/razan/Documents/Research/2.Technical/1.Seg-papers/2.UCA_Net/main-code/Results/SR/')
+    parser.add_argument('--train_path', type=str, default='../train/')
+    parser.add_argument('--valid_path', type=str, default='../valid/')
+    parser.add_argument('--test_path', type=str, default='../test/')
+    parser.add_argument('--model_path', type=str, default='../Results/models/')
+    parser.add_argument('--result_path', type=str, default='../Results/results/')
+    parser.add_argument('--SR_path', type=str, default='../Results/SR/')
 
     parser.add_argument('--cuda_idx', type=int, default=1)
 
@@ -127,4 +127,5 @@ if __name__ == '__main__':
         config.save_images = True
         print("🖼️  Auto-enabled save_images for test mode")
     
+
     main(config)
