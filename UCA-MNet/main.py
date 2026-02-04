@@ -92,7 +92,7 @@ if __name__ == '__main__':
     parser.add_argument('--num_epochs', type=int, default=100)     # Standard for medical segmentation
     parser.add_argument('--num_epochs_decay', type=int, default=10) # T_0 for CosineAnnealingWarmRestarts
     parser.add_argument('--batch_size', type=int, default=2)       # Larger batch for stable gradients
-    parser.add_argument('--loss_threshold', type=float, default=0.5)
+    parser.add_argument('--loss_threshold', type=float, default=0.8)
     parser.add_argument('--loss_type', type=str, default='BCE_Dice_mIoU', help='[BCE,BCE_mIoU,BCE_Dice_mIoU]')
     parser.add_argument('--optimizer', type=str, default='Adam', help='[Adam,SGD,AdamW]') # Standard Adam (research-proven)
     parser.add_argument('--beta1', type=float, default=0.9)        # Standard Adam momentum
@@ -129,3 +129,4 @@ if __name__ == '__main__':
     
 
     main(config)
+
