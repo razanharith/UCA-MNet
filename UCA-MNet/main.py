@@ -1,6 +1,6 @@
 import argparse
 import os
-from solver import Solver  # Updated to use solver_n which has EADSNet support
+from solver import Solver  
 from data_loader import get_loader
 from torch.backends import cudnn
 import random
@@ -46,10 +46,10 @@ def main(config):
         ablation_models = [model for model in config.models.split(',') if model in all_ablation_models]
         if not ablation_models:
             print(f"Warning: No valid models found. Available models: {all_ablation_models}")
-            ablation_models = ['UCA_Net']  # Default to complete UCA-Net model
+            ablation_models = ['UCA_Net'] 
     else:
-        ablation_models = ['UCA_Net']  # Default to complete UCA-Net model
-
+        ablation_models = ['UCA_Net']  
+        
     print(f"Running models: {ablation_models}")
 
     # Process each model
@@ -84,21 +84,21 @@ if __name__ == '__main__':
     # Model hyper-parameters
     parser.add_argument('--img_ch', type=int, default=3)
     parser.add_argument('--output_ch', type=int, default=1)
-    parser.add_argument('--image_size', type=int, default=320)     # Standard size for better results
+    parser.add_argument('--image_size', type=int, default=320)   
     parser.add_argument('--num_workers', type=int, default=0)
 
     # Training hyper-parameters - Research-Proven for Medical Segmentation
-    parser.add_argument('--lr', type=float, default=0.001)        # Higher LR for large datasets (research-proven)
-    parser.add_argument('--num_epochs', type=int, default=100)     # Standard for medical segmentation
-    parser.add_argument('--num_epochs_decay', type=int, default=10) # T_0 for CosineAnnealingWarmRestarts
-    parser.add_argument('--batch_size', type=int, default=2)       # Larger batch for stable gradients
+    parser.add_argument('--lr', type=float, default=0.001)        
+    parser.add_argument('--num_epochs', type=int, default=100)     
+    parser.add_argument('--num_epochs_decay', type=int, default=10) 
+    parser.add_argument('--batch_size', type=int, default=2)       
     parser.add_argument('--loss_threshold', type=float, default=0.8)
     parser.add_argument('--loss_type', type=str, default='BCE_Dice_mIoU', help='[BCE,BCE_mIoU,BCE_Dice_mIoU]')
-    parser.add_argument('--optimizer', type=str, default='Adam', help='[Adam,SGD,AdamW]') # Standard Adam (research-proven)
-    parser.add_argument('--beta1', type=float, default=0.9)        # Standard Adam momentum
-    parser.add_argument('--beta2', type=float, default=0.999)      # Standard Adam momentum
-    parser.add_argument('--weight_decay', type=float, default=0.00005) # Research-proven weight decay (Ma and Yarats, 2021)
-    parser.add_argument('--augmentation_prob', type=float, default=0.9) # Strong augmentation for large datasets
+    parser.add_argument('--optimizer', type=str, default='Adam', help='[Adam,SGD,AdamW]')
+    parser.add_argument('--beta1', type=float, default=0.9)       
+    parser.add_argument('--beta2', type=float, default=0.999)     
+    parser.add_argument('--weight_decay', type=float, default=0.00005) 
+    parser.add_argument('--augmentation_prob', type=float, default=0.9) 
 
 
 
@@ -129,4 +129,5 @@ if __name__ == '__main__':
     
 
     main(config)
+
 
