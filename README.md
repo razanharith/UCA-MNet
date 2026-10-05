@@ -181,11 +181,15 @@ All images resized to 320×320. Ground-truth masks binarised at threshold 0.8.
 If you use this code in your research, please cite:
 
 ```bibtex
-@misc{alharith2025ucamnet,
-  title   = {{UCA-MNet}: An Ultra-Lightweight Cross-Scale Attention Mamba Network
-             for Accurate Skin Lesion Segmentation},
-  author  = {Alharith, Razan},
-  year    = {2025},
+@ARTICLE{11592366,
+  author={Alharith, Razan and Zhang, Jiashu and Zhao, Chengqiang},
+  journal={IEEE Journal of Biomedical and Health Informatics}, 
+  title={An Ultra-Lightweight Cross-scale Attention Mamba Network for Accurate Skin Lesion Segmentation}, 
+  year={2026},
+  volume={},
+  number={},
+  pages={1-14},
+  doi={10.1109/JBHI.2026.3708901}
   url     = {https://github.com/razanharith/UCA-MNet}
 }
 ```
