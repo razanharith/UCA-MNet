@@ -190,7 +190,6 @@ If you use this code in your research, please cite:
   number={},
   pages={1-14},
   doi={10.1109/JBHI.2026.3708901}
-  url     = {https://github.com/razanharith/UCA-MNet}
 }
 ```
 
